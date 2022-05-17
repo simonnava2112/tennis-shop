@@ -1,0 +1,241 @@
+:root {
+    --header-bg: #1E90FF;
+    --button-color: #1E90FF;
+    --button-text: white;
+    --button-border: #1E90FF;
+    --header-text:  #FFFFFF;
+    --navbar-hover: #87CEEB;
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 p {
+	margin: 0px;
+	font-family: Tahoma;
+}
+
+a {
+    text-decoration: none;
+    box-shadow: none;
+    color: var(--button-text);
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar-home {
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: center;
+    width: 100%;
+    height: 8rem;
+    background: var(--header-bg);
+    color: var(--button-text)
+}
+.logotipo {
+    width: 12rem;
+    padding: 0;
+    margin: 0.5rem;
+    border-radius: 100%;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.logo-nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation ul li {
+    display: inline-block;
+}
+
+.navigation ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+
+.navigation ul li:hover {
+    background: var(--navbar-hover);
+    border-radius: 10px;
+}
+
+
+.main-producto {
+    display: flex;
+    height: 25rem;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-producto {
+    border: 3px solid;
+    display: flex;
+    width: 60rem;
+    height: 25rem;
+    justify-content: center;
+    padding: 0;
+}
+
+.carta-producto {
+    border-bottom: 1px solid lightgray;
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+}
+
+#img-carta {
+    
+    width: 9rem;
+    height: 9rem;
+}
+
+#img-producto {
+    width: 8.5rem;
+}
+
+.nombre-producto {
+    
+    width: 90%;
+    height: 9rem;
+    padding-left: 0.5rem;
+}
+
+#descripcion-precio {
+    display: grid;
+    height: 7.2rem;
+    width: 50rem;
+
+}
+
+#precio {
+    text-align: right;
+    margin: 0.5rem;
+}
+
+button {
+    border-radius: 0.6rem;
+    background: var(--button-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: var(--button-text);
+    border: var(--button-border);
+    cursor: pointer;
+    width: 5rem;
+    height: 2rem;
+    box-shadow: 5px 5px 5px 5px lightgrey;
+
+}
+button:active {
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+
+}
+
+#whap-img{
+    width: 3.5rem;
+    position: absolute;
+    bottom: 8rem;
+    right: 3rem;
+}
+
+
+footer {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    text-align: center;
+    background: gainsboro;
+
+}
+
+footer > a {
+    text-decoration: none;
+    box-shadow: none;
+    color: black;
+    font-size: 0.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#iconos-f {
+    color:black;
+}
+.img-footer {
+
+    width: 4rem;
+}
+#img-footer {
+    width: 10rem;
+
+}
+
+#img-penn {
+    width: 7.5rem;
+
+}
+
+.sponsor {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    flex: 1;
+}
+
+.contenedor-redes {
+    flex: 1;
+    padding-top: 0.5rem;
+}
+.contenedor-redes > h3 {
+    margin-bottom: 1rem;
+}
+
+.follow > h3 {
+    margin-bottom: 1rem;
+}
+
+.follow {
+    flex: auto;
+    padding-top: 0.5rem;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 700px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .contenedor-opciones {
+        padding-top: 3rem;
+    }
+    
+
+    main {
+        margin-bottom: 5.5rem;
+    }
+
+    #whap-img{
+        right: 0.5rem;
+        position: fixed;
+        
+    }
+}

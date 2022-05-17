@@ -1,0 +1,519 @@
+:root {
+    --header-bg: #1E90FF;
+    --button-color: #1E90FF;
+    --button-text: white;
+    --button-border: #1E90FF;
+    --header-text:  #FFFFFF;
+    --navbar-hover: #87CEEB;
+    --navbar-li-hover: #87CEEB;
+    --carta-productos: #F0F0F0;
+    --carta-hover: #B4B4B4;
+    --modal-bg: rgba(0,0,0,0.4);
+    --modal-content-bg: #FEFEFE;
+    --header-modal-bg: #1E90FF;
+    --header-modal-text: white;
+    --scrollbar-bg: #F5F5F5;
+    --scrollbar-color: #1E90FF;
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0px;
+	font-family: Tahoma;
+}
+
+a {
+    text-decoration: none;
+    box-shadow: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar-home {
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: center;
+    width: 100%;
+    height: 8rem;
+    background: var(--header-bg);
+}
+
+.logotipo {
+    width: 12rem;
+    padding: 0;
+    margin: 0.5rem;
+    border-radius: 100%;
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation ul li {
+    display: inline-block;
+}
+
+.navigation ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+    color: var(--button-text);
+}
+
+.navigation ul li:hover {
+    background: var(--navbar-li-hover);
+    border-radius: 10px;
+}
+
+.main-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.logo-nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contenedor-opciones {
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    margin: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    gap: 2rem;
+}
+
+.button-a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.6rem;
+    background: var(--button-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: var(--button-text);
+    border: var(--button-border);
+    cursor: pointer;
+    width: 15rem;
+    height: 5rem;
+    box-shadow: 5px 5px 5px 5px lightgrey;
+    color: var(--button-text);
+    width: 15rem;
+    height: 5rem;
+}
+
+.button-a:active {
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+#whap-img {
+    width: 3.5rem;
+    position: absolute;
+    bottom: 8rem;
+    right: 3rem;
+}
+
+footer {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    text-align: center;
+    background: gainsboro;
+    height: 6rem;
+}
+
+.img-footer {
+    width: 4rem;
+    height: auto;
+}
+
+#img-footer {
+    width: 10rem;
+    height: auto;
+}
+
+#img-penn {
+    width: 7.5rem;
+    height: auto;
+}
+
+.sponsor {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    flex: 1;
+}
+
+.contenedor-redes {
+    flex: 1;
+    padding-top: 0.5rem;
+}
+.contenedor-redes > h3 {
+    margin-bottom: 1rem;
+}
+
+.follow > h3 {
+    margin-bottom: 1rem;
+}
+
+.follow {
+    flex: auto;
+    padding-top: 0.5rem;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 700px) {
+
+    .logo-nav-container{
+        width: 100%;
+    }
+    .navigation {
+        width: 100%;
+        padding: 0;
+        margin: auto;
+    }
+    .navigation ul {
+        display: none;
+    }
+    .navigation ul.show {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--header-bg);
+    }
+    .navigation ul li {
+        display: block;
+        margin-left: 1rem;
+    }
+    
+    .navigation ul li a {
+        display: block;
+        padding: 0.5rem 0;
+        transition: all 0.4s linear;
+        border-radius: 5px;
+    }
+    
+    .navigation ul li:hover {
+        background: skyblue;
+        width: 15%;
+    }
+    .menu-icon {
+        display: block;
+        color: var(--button-text);
+        cursor: pointer;
+    }
+    
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 13rem;
+    }
+
+    .sponsor {
+        display: flex;
+        justify-content: center;
+    }
+
+    .contenedor-opciones {
+        padding-top: 3rem;
+    }
+    
+    main {
+        margin-bottom: 5.5rem;
+    }
+
+    #whap-img{
+        right: 0.5rem;
+        position: fixed; 
+    }
+}
+
+/* Aqui comienza pagina productos */
+
+.navbar-productos {
+    display: flex;
+    position: sticky;
+    width: 100%;
+    padding: 0;
+    height: 8rem;
+    background: var(--header-bg);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar-productos a {
+    color: var(--header-text);
+    text-decoration: none;
+}
+
+.nav-contenedor {
+    border: 3px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    letter-spacing: 3rem;
+    margin: 0;
+    height: 8rem;
+}
+
+.img-carta {
+    width: 6rem;
+    height: 6rem;
+}
+
+.main-producto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.35rem;
+}
+
+.contenedor-producto {
+    max-width: 48.42rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    border: 0.15rem solid var(--carta-productos);
+    box-shadow: 0.3rem 0.3rem 0.3rem var(--carta-hover);
+    border-radius: 0.6rem;
+}
+
+.carta-producto {
+    display: flex;
+    margin: auto;
+    padding: 0.3rem;
+    border-bottom: 0.18rem solid var(--carta-productos);
+    gap: 0.6rem;
+}
+
+.carta-producto:hover {
+    background: var(--carta-productos);
+    cursor: pointer;
+}
+
+.nombre-producto {
+    display: flex;
+    flex-direction: column;
+}
+.descripcion-precio {
+    margin: 0.8rem 0 0 0;
+    flex: 1;
+}
+.precio {
+    color: var(--header-bg);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-bottom: 0;
+    flex: 2;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/*Estilos para la pag especificaciones  de cada producto*/
+.img-especificaciones {
+    width: 15rem;
+    height: 15rem;
+}
+.cantidad {
+    display: inline-flex;
+    margin: 0.5rem 0 0.5rem 0;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.cantidad-producto {
+    background: var(--button-text);
+    border: 0.15rem solid var(--carta-productos);
+    box-shadow: 0.3rem 0.3rem 0.3rem var(--carta-hover);
+    border-radius: 0.6rem;
+    padding: 1rem;
+}
+
+.button-product {
+    border-radius: 0.6rem;
+    background: var(--button-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: var(--button-text);
+    border: var(--button-border);
+    cursor: pointer;
+    width: 7rem;
+    height: 2rem;
+    box-shadow: 5px 5px 5px 5px var(--carta-productos);
+    margin-top: 2rem;
+}
+
+.button-product:active {
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.button-product:hover {
+    background: var(--navbar-hover);
+}
+
+/*Modal*/
+.modal {
+    background-color: var(--modal-bg);
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42.04rem;
+    height: 26.25rem;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    margin: 7.5rem auto auto 22rem;
+}
+
+/*Esto es especifico para las pelotas y accesorios*/
+.modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: auto;
+    background-color: var(--modal-content-bg);
+    border: 0.15rem solid var(--carta-productos);
+    border-radius: 0.6rem;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    margin: 7.5rem auto auto 22rem;
+}
+
+.modal-elements {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modal-content-bg);
+    border-radius: 0.6rem;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--header-modal-bg);
+    color: var(--header-modal-text);
+    border-top: 0.18rem solid var(--header-modal-bg);
+    border-top-left-radius: 0.6rem;
+    border-top-right-radius: 0.6rem;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    margin: 0.5rem;
+    border: 0.06rem solid lightgray;
+    border-radius: 0.6rem;
+}
+
+.logotipo-modal {
+    width: 6rem;
+    padding: 0;
+    margin: 0.5rem;
+    border-radius: 100%;
+}
+
+.product {
+    display: flex;
+    margin: auto;
+    padding: 0.3rem;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.price {
+    display: flex;
+    justify-content: end;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-18rem; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    position: fixed;
+    color: white;
+    font-size: 1.68rem;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*Personalizar scrollbar*/
+.modal-body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 0.36rem rgba(0,0,0,0.3);
+    border-radius: 0.6rem;
+    background-color: var(--modal-bg);
+}
+
+.modal-body::-webkit-scrollbar {
+    width: 0.72rem;
+    background-color: var(--scrollbar-bg);
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    border-radius: 0.6rem;
+    -webkit-box-shadow: inset 0 0 0.36rem rgba(0,0,0,.3);
+    background-color: var(--scrollbar-color);
+}
